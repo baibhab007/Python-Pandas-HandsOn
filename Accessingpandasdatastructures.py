@@ -33,3 +33,32 @@ Select the column df_A referring to student heights, and store it in the variabl
 Print the type of object of the variable height.
 ####
 
+weights_A = pd.Series([85.1,90.2,76.8,80.4,78.9],index=['s1','s2','s3','s4','s5'])
+d1 = {'Student_height': heights_A, 'Student_weight' : weights_A}
+df_A = pd.DataFrame(d1)
+height = df_A['Student_height']
+print(type(height))
+
+####
+Task 4
+Select the rows corresponding to students s1, s2 of df_A, and capture them in another dataframe df_s1s2. Note: Use either .loc or .iloc methods.
+
+Print the dataframe df_s1s2.
+####
+
+df_s1s2 = df_A.loc['s1':'s2']
+print(df_s1s2)
+
+####
+Task 5
+Select the rows corresponding to students s1, s2 and s5 of df_A in the order s2, s5, s1, and capture them in another dataframe df_s2s5s1.
+Note: Make use of either .loc or .iloc methods.
+
+Print the dataframe df_s2s5s1
+####
+
+df_s2s5s1 = df_A.loc[1],df_A.loc[4], df_A.loc[0]
+print(df_s2s5s1)
+
+
+
