@@ -17,3 +17,10 @@ Filter the rows from df_A, whose Student_height > 160.0 and Student_weight < 80.
 Print the dataframe df_A_filter1.
 ####
 
+import numpy as np
+import pandas as pd
+heights_A = pd.Series([176.2, 158.4, 167.6, 156.2, 161.4],index=['s1','s2','s3','s4','s5'])
+weights_A = pd.Series([85.1, 90.2, 76.8, 80.4, 78.9],index=['s1','s2','s3','s4','s5'])
+df_A=pd.DataFrame({'Student_height': heights_A, 'Student_weight': weights_A})
+df_A_filter = df_A.loc['Student_height' > 160.0 & 'Student_weight' < 80.0]
+print(df_A_filter)
