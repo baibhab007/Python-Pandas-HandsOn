@@ -59,7 +59,7 @@ np.random.seed(100)
 heights_B = pd.Series(170.0+25.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
 weights_B = pd.Series(75.0+12.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
 df_B = pd.DataFrame({'Student_height':heights_B,'Student_weight':weights_B})
-df_B.reindex(['s7','s8','s9','s10','s11'])
+df_B.index(['s7','s8','s9','s10','s11'])
 df_B['Gender']=['F', 'M', 'F', 'F', 'M']
 df = pd.concat([df_AA, df_B])
 print(df)
