@@ -70,3 +70,9 @@ Verify if the file classB.csv exists in the present directory using the command 
 Display the contents of classB.csv using the command cat classB.csv.
 ####
 
+np.random.seed(100)
+heights_B = pd.Series(170.0+25.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
+weights_B = pd.Series(75.0+12.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
+df_B = pd.DataFrame({'Student_height':heights_B,'Student_weight':weights_B})
+df_B.to_csv('classB.csv', index=False)
+
