@@ -72,7 +72,39 @@ Display the contents of classB.csv using the command cat classB.csv.
 
 np.random.seed(100)
 heights_B = pd.Series(170.0+25.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
+np.random.seed(100)
 weights_B = pd.Series(75.0+12.0*np.random.randn(5),index=['s1','s2','s3','s4','s5'])
 df_B = pd.DataFrame({'Student_height':heights_B,'Student_weight':weights_B})
 df_B.to_csv('classB.csv', index=False)
 
+ls -1
+cat classB.csv
+
+####
+Task 5
+Read the data from the classB.csv file into a dataframe df_B2. Note: Use the read_csv method.
+Display the dataframe df_B2
+####
+
+df_B2 = pd.read_csv('classB.csv')
+print(df_B2)
+
+
+####
+Task 6
+Read data from the classB.csv file into a dataframe df_B3, such that the argument header of read_csv is set to None Note: When the header is set to None, data is read assuming there is no header in the input csv file.
+Display the dataframe df_B3.
+####
+
+df_B3 = pd.read_csv('classB.csv', header=None)
+print(df_B3)
+
+####
+Task 7
+Read data from the classB.csv file into a dataframe df_B4, such that the argument header of read_csv is set to None, and argument skiprows is set to 2. Note: *skiprows skips reading the first n number of rows from the input csv file.*
+Display the dataframe df_B4.
+
+####
+
+df_B4 = pd.read_csv('classB.csv', header=None, skiprows=2)
+print(df_B4)
