@@ -57,7 +57,7 @@ Note: Make use of either .loc or .iloc methods.
 Print the dataframe df_s2s5s1
 ####
 
-df_s2s5s1 = df_A.loc[1],df_A.loc[4], df_A.loc[0]
+df_s2s5s1 = (df_A.loc[1], df_A.loc[4], df_A.loc[0])
 print(df_s2s5s1)
 
 
